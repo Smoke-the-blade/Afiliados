@@ -1,0 +1,20 @@
+[
+  {
+    "numero_afiliado": 123,
+    "nombre": "HOLA",
+    "apellido": "Lopez",
+    "tipo": "parcial"
+  },
+  {
+    "numero_afiliado": 1234,
+    "nombre": "HOLA",
+    "apellido": "Hola",
+    "tipo": "parcial"
+  },
+  {
+    "numero_afiliado": 4321,
+    "nombre": "Lucas",
+    "apellido": "Lucas",
+    "tipo": "permanente"
+  }
+]

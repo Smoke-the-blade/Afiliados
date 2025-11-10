@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="wrap">
-<div class="card">
+<div class="card" id="formCard">
 <h1>Formulario de Afiliación</h1>
 <p class="lead">Rellena los datos para crear una nueva afiliación.</p>
 
@@ -24,11 +24,9 @@
 <div>
 <label for="tipo">Tipo de afiliado *</label>
 <select id="tipo" name="tipo" required>
-<option value="">-- Selecciona --</option>
-<option value="estandar">Estándar</option>
-<option value="premium">Premium</option>
-<option value="vip">VIP</option>
-<option value="corporativo">Corporativo</option>
+  <option value="">-- Selecciona --</option>
+  <option value="permanente">Permanente</option>
+  <option value="parcial">Parcial</option>
 </select>
 <div class="error" id="tipoError"></div>
 </div>
@@ -51,6 +49,7 @@
 <div class="full actions">
 <button type="submit">Enviar afiliación</button>
 <button type="button" id="resetBtn">Limpiar</button>
+<button type="button" id="viewListBtn">Ver lista completa</button>
 <span>Estado: <span id="status">listo</span></span>
 </div>
 
@@ -60,6 +59,28 @@
 </div>
 </form>
 </div>
+</div>
+
+<!-- Modal de éxito -->
+<div id="successModal" class="modal-overlay hidden">
+  <div class="modal">
+    <h2>OK</h2>
+    <p>Se agregaron exitosamente las credenciales.</p>
+    <div class="modal-actions">
+      <button id="closeModalBtn">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Vista de listado -->
+<div id="listView" class="hidden">
+  <div class="card">
+    <h2>Lista completa de afiliados</h2>
+    <div id="listContainer"></div>
+    <div class="actions" style="margin-top:14px;">
+      <button type="button" id="backToFormBtn">Volver al formulario</button>
+    </div>
+  </div>
 </div>
 
 

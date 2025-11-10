@@ -119,3 +119,34 @@ pre{
     grid-template-columns:1fr;
   }
 }
+
+/* --- Oculto utilitario --- */
+.hidden{ display:none; }
+
+/* --- Modal --- */
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.modal-overlay.hidden{ display:none; }
+.modal{
+  background:var(--card);
+  border-radius:12px;
+  padding:20px;
+  max-width:420px;
+  width:100%;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+.modal h2{ margin-bottom:8px; }
+.modal-actions{ margin-top:14px; display:flex; justify-content:flex-end; }
+.modal-actions button{ background:var(--accent); color:#fff; }
+
+/* --- Tabla listado --- */
+.table{ width:100%; border-collapse:collapse; margin-top:12px; }
+.table th, .table td{ border:1px solid var(--border); padding:8px; text-align:left; }
+.table th{ background:#f3f4f6; }
