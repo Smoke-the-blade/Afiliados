@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Formulario de Afiliación</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="wrap">
+<div class="card">
+<h1>Formulario de Afiliación</h1>
+<p class="lead">Rellena los datos para crear una nueva afiliación.</p>
+
+
+<form id="affiliateForm" novalidate>
+<div>
+<label for="code">Código de afiliado *</label>
+<input type="text" id="code" name="code" required />
+<div class="error" id="codeError"></div>
+</div>
+
+
+<div>
+<label for="tipo">Tipo de afiliado *</label>
+<select id="tipo" name="tipo" required>
+<option value="">-- Selecciona --</option>
+<option value="estandar">Estándar</option>
+<option value="premium">Premium</option>
+<option value="vip">VIP</option>
+<option value="corporativo">Corporativo</option>
+</select>
+<div class="error" id="tipoError"></div>
+</div>
+
+
+<div>
+<label for="nombre">Nombre *</label>
+<input type="text" id="nombre" name="nombre" required />
+<div class="error" id="nombreError"></div>
+</div>
+
+
+<div>
+<label for="apellido">Apellido *</label>
+<input type="text" id="apellido" name="apellido" required />
+<div class="error" id="apellidoError"></div>
+</div>
+
+
+<div class="full actions">
+<button type="submit">Enviar afiliación</button>
+<button type="button" id="resetBtn">Limpiar</button>
+<span>Estado: <span id="status">listo</span></span>
+</div>
+
+
+<div class="full">
+<pre id="out">{}</pre>
+</div>
+</form>
+</div>
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>
