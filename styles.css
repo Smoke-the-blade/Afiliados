@@ -1,0 +1,121 @@
+/* --- Estilos generales --- */
+:root{
+  --bg:#f6f8fa;
+  --card:#ffffff;
+  --accent:#0366d6;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,Arial,sans-serif;}
+body{
+  background:var(--bg);
+  color:#0f172a;
+  line-height:1.4;
+  padding:20px;
+}
+
+/* --- Contenedor principal --- */
+.wrap{
+  max-width:720px;
+  margin:40px auto;
+}
+
+/* --- Tarjeta del formulario --- */
+.card{
+  background:var(--card);
+  border-radius:14px;
+  padding:28px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.06);
+}
+
+h1{
+  font-size:22px;
+  margin-bottom:6px;
+}
+
+.lead{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+/* --- Formulario --- */
+form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+label{
+  display:block;
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+input[type="text"], select{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  font-size:14px;
+  background:white;
+}
+
+input:focus, select:focus{
+  outline:none;
+  border-color:var(--accent);
+  box-shadow:0 0 0 2px rgba(3,102,214,0.15);
+}
+
+.full{
+  grid-column:1 / -1;
+}
+
+.actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+button{
+  padding:10px 16px;
+  border:none;
+  border-radius:8px;
+  font-size:14px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+button[type="submit"]{
+  background:var(--accent);
+  color:white;
+}
+
+#resetBtn{
+  background:#e8eefc;
+  color:var(--accent);
+  border:1px solid rgba(3,102,214,0.2);
+}
+
+.error{
+  margin-top:4px;
+  font-size:12px;
+  color:#b91c1c;
+  min-height:14px;
+}
+
+pre{
+  background:#0b1220;
+  color:#e6eef8;
+  padding:14px;
+  border-radius:8px;
+  overflow:auto;
+  font-size:13px;
+}
+
+/* --- Responsive --- */
+@media(max-width:640px){
+  form{
+    grid-template-columns:1fr;
+  }
+}
